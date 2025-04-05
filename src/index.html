@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Inventory Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Product Inventory Management</h1>
+        <form id="inventory-form">
+            <label for="product-type">Product Type:</label>
+            <select id="product-type" required>
+                <option value="" disabled selected>Select a product</option>
+                <option value="A">Product A</option>
+                <option value="B">Product B</option>
+                <option value="C">Product C</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" placeholder="Enter quantity" required min="1">
+
+            <label for="cost">Cost per Item:</label>
+            <input type="number" id="cost" placeholder="Enter cost per item" required min="0.01" step="0.01">
+
+            <button type="submit">Add to Inventory</button>
+        </form>
+
+        <div id="summary">
+            <h2>Inventory Summary</h2>
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Cost: $<span id="total-cost">0.00</span></p>
+            <p>Average Cost per Item: $<span id="average-cost">0.00</span></p>
+            <h3>Product Breakdown</h3>
+            <ul>
+                <li>Product A: <span id="product-a-count">0</span> items</li>
+                <li>Product B: <span id="product-b-count">0</span> items</li>
+                <li>Product C: <span id="product-c-count">0</span> items</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

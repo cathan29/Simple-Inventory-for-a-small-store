@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Inventory Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📦 Product Inventory Management</h1>
+
+        <!-- Inventory Form -->
+        <form id="inventory-form" class="form">
+            <label for="product-type">Product Type:</label>
+            <select id="product-type" required>
+                <option value="" disabled selected>Select a product</option>
+                <option value="A">Soft Drinks</option>
+                <option value="B">Sandwich</option>
+                <option value="C">Burger</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" placeholder="Enter quantity" required min="1">
+
+            <label for="cost">Cost per Item:</label>
+            <input type="number" id="cost" placeholder="Enter cost per item" required min="0.01" step="0.01">
+
+            <button type="submit">Add to Inventory</button>
+        </form>
+
+        <!-- Add New Product Section -->
+        <div id="add-product" class="form">
+            <h2>➕ Add New Product</h2>
+            <label for="new-product-name">Product Name:</label>
+            <input type="text" id="new-product-name" placeholder="Enter new product name">
+            <button id="add-product-btn">Add Product</button>
+        </div>
+
+        <!-- Inventory Summary -->
+        <div id="summary">
+            <h2>📊 Inventory Summary</h2>
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Cost: ₱<span id="total-cost">0.00</span></p>
+            <p>Average Cost per Item: ₱<span id="average-cost">0.00</span></p>
+            <h3>Product Breakdown</h3>
+            <ul id="product-breakdown">
+                <li>Soft Drinks:<span id="product-a-count">0</span> items</li>
+                <li>Sandwich: <span id="product-b-count">0</span> items</li>
+                <li>Burger: <span id="product-c-count">ㅤ0</span> items</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
